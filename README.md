@@ -1,7 +1,7 @@
 Description
 --------------
 
-Stock market prediction has been a vital requirement of the investors. Computer science plays an important role in it. Well-organized and EMH had been one of the prominent theory about stock prediction. Collapse of it had resulted in research in the area of prediction of stocks. Yahoo finance API and google sentimental analysis API. The idea of project is about taking non quantifiable data such as financial twitts about a company and predicting its future stock trend with twitts (twitter) sentiment classification.
+Stock market prediction has been a vital requirement of the investors. Computer science plays an important role in it. Well-organized and EMH had been one of the prominent theory about stock prediction. Collapse of it had resulted in research in the area of prediction of stocks. Yahoo finance API and google sentiment analysis API. The idea of project is about taking non quantifiable data such as financial twitts about a company and predicting its future stock trend with twitts (twitter) sentiment classification.
 
 Objective
 -----------
@@ -24,4 +24,4 @@ access the api and the MPAndroid Chart Library of Philipp Jahoda https://github.
 Pre-requisites
 --------------
 
-- Min Android SDK supported v16
+- Min Android SDK supported v17
