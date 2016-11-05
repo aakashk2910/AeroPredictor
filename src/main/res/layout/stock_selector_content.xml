@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="@dimen/dimen_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginEnd="@dimen/dimen_large"
+            android:layout_marginRight="@dimen/dimen_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/symbol_suggestion"
+                android:hint="@string/symbol_suggestion_hint"
+                style="@style/TextStyle.ListItem.Title"
+                android:imeOptions="actionDone"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/in_progress"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_width="@dimen/dimen_large"
+            android:layout_height="@dimen/dimen_large"/>
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/suggestion_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

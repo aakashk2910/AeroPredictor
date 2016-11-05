@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.aerotron.aeropredictor"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="com.aerotron.aeropredictor.AeroPredictorApp"
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label=""
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.aerotron.aeropredictor.ui.Splash"
+            android:theme="@style/AppTheme.ContextActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.aerotron.aeropredictor.ui.MainActivity"
+            android:theme="@style/AppTheme.ContextActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.aerotron.aeropredictor.ui.StockPrefsActivity"
+            android:label="Stock Portfolio"
+            android:parentActivityName="com.aerotron.aeropredictor.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aerotron.aeropredictor.ui.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.aerotron.aeropredictor.ui.StockDetailActivity"
+            android:theme="@style/StockDetailTheme"
+            android:parentActivityName="com.aerotron.aeropredictor.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aerotron.aeropredictor.ui.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.aerotron.aeropredictor.ui.StockSelectorActivity"
+            android:theme="@style/StockDetailTheme"
+            android:label="Stock Selector"
+            android:parentActivityName="com.aerotron.aeropredictor.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aerotron.aeropredictor.ui.MainActivity"/>
+        </activity>
+
+
+    </application>
+
+</manifest>
