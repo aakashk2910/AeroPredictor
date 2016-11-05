@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/colorPrimaryBackground"
+              android:layout_height="wrap_content">
+
+    <!-- Added outer LinearLayout with background color so list items maintain white bkgd when one of them is activated -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@drawable/touch_selector"
+        android:padding="@dimen/dimen_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- StockItem name-->
+        <TextView
+            android:id="@+id/stock_name"
+            tools:text="Apple Computers"
+            style="@style/TextStyle.ListItem.Title"
+            />
+
+        <!-- Symbol/Exchange-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/stock_symbol"
+                tools:text="AAPL"
+                style="@style/TextStyle.ListItem.Body.AllCaps"
+                />
+
+            <TextView
+                style="@style/TextStyle.ListItem.Body.AllCaps"
+                android:text="@string/stock_item_divider"
+                />
+
+
+            <TextView
+                android:id="@+id/stock_exchange"
+                tools:text="NYSE"
+                style="@style/TextStyle.ListItem.Body.AllCaps"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/stock_day_hi_lo"
+            android:text="@string/stock_day_hi_lo"
+            style="@style/TextStyle.ListItem.Body.AllCaps"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            />
+
+        <!-- StockItem prices -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/stock_price"
+                tools:text="$1210.35"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                style="@style/TextStyle.ListItem.Body.StockPrice"/>
+
+            <LinearLayout
+                android:id="@+id/stock_change_wrapper"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/stock_change"
+                    tools:text="-2.00"
+                    tools:drawableLeft="@drawable/ic_arrow_drop_up_green_18dp"
+                    style="@style/TextStyle.ListItem.Body.Values"
+                    android:layout_gravity="end"/>
+
+                <TextView
+                    android:id="@+id/stock_change_in_percent"
+                    tools:text="-1.12"
+                    style="@style/TextStyle.ListItem.Body.Values"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/stock_day_hi"
+                    tools:text="133.10"
+                    style="@style/TextStyle.ListItem.Body.Values"/>
+
+                <TextView
+                    android:id="@+id/stock_day_lo"
+                    tools:text="121.23"
+                    style="@style/TextStyle.ListItem.Body.Values"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

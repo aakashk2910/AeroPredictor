@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_large"
+        android:layout_marginLeft="@dimen/dimen_large"
+        android:layout_marginRight="@dimen/dimen_large"
+        android:layout_marginBottom="@dimen/dimen_normal"
+        android:paddingTop="@dimen/dimen_normal"
+        android:paddingLeft="@dimen/dimen_large"
+        android:paddingRight="@dimen/dimen_large"
+        android:paddingBottom="@dimen/dimen_large"
+        android:background="@color/colorPrimaryBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <!-- StockItem title -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen_normal"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/stock_name"
+                    tools:text="Apple Computers"
+                    style="@style/TextStyle.StockDetail.Title.Name"/>
+
+                <TextView
+                    android:id="@+id/stock_symbol"
+                    tools:text="[AAPL]"
+                    style="@style/TextStyle.StockDetail.Title.Symbol"
+                    android:layout_marginLeft="@dimen/dimen_small"
+                    android:layout_marginStart="@dimen/dimen_small"/>
+
+            </LinearLayout>
+
+            <!-- StockItem values -->
+            <include layout="@layout/stock_item_table_data_horizontal"/>
+
+    </LinearLayout>
+
+<!--</ScrollView>-->
